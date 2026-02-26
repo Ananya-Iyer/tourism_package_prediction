@@ -78,4 +78,7 @@ input_data = pd.DataFrame([{
 if st.button("Predict Purchase"):
     prediction = model.predict(input_data)[0]
     st.subheader("Prediction Result:")
-    st.success(f"Customer is likely to decide: **${prediction}**")
+    if prediction == 1:
+        st.success("Customer is likely to PURCHASE the package.")
+    else:
+        st.error("Customer is NOT likely to purchase.")

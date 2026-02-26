@@ -26,6 +26,8 @@ from sklearn.metrics import (
     f1_score, roc_auc_score, average_precision_score
 )
 from sklearn.model_selection import GridSearchCV, StratifiedKFold
+import mlflow
+
 
 mlflow.set_tracking_uri("http://localhost:5000")
 mlflow.set_experiment("mlops-training-experiment")

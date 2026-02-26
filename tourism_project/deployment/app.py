@@ -24,15 +24,15 @@ marital_status = st.selectbox("Marital Status", ["Married", "Divorced", "Single"
 passport = st.selectbox("Passport", ["Yes", "No"])
 own_car = st.selectbox("Own Car", ["Yes", "No"])
 job_title = st.selectbox("Job Designation", ["Executive", "Manager", "Senior Manager", "AVP", "VP"])
+city_tier = st.selectbox("City Tier", ["1", "2", "3"])
+property_star = st.selectbox("Preferred Property Star", ["3", "4", "5", "7"])
 
 
 # Numerical
 cust_age = st.number_input("Age", min_value=1, max_value=100, value=25, step=1)
-city_tier = st.number_input("City Tier", min_value=1, max_value=3, value=1, step=1)
 pitch_duration = st.number_input("Sales Pitch Duration", min_value=1, max_value=200, value=5, step=1)
 people_count = st.number_input("Visitors Count", min_value=1, max_value=50, value=2, step=1)
 follow_up_count = st.number_input("Follow up Count", min_value=1, max_value=20, value=2, step=1)
-property_star = st.number_input("Preferred Property Star", min_value=3, max_value=7, value=3, step=1)
 number_of_trips = st.number_input("Number of Trips", min_value=1, max_value=100, value=1, step=1)
 number_of_childern = st.number_input("Number of Children Visiting", min_value=1, max_value=10, value=1, step=1)
 monthly_income = st.number_input("Monthly Income", min_value=1000, max_value=1000000, value=5000)
@@ -62,7 +62,6 @@ input_data = pd.DataFrame([{
 }])
 
 # Predict button
-if st.button("Predict Revenue"):
+if st.button("Predict Purchase"):
     prediction = model.predict(input_data)[0]
     st.subheader("Prediction Result:")
-    st.success(f"Estimated Ad Revenue: **${prediction:,.2f} USD**")

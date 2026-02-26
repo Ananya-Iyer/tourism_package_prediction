@@ -28,6 +28,7 @@ from sklearn.metrics import (
 from sklearn.model_selection import GridSearchCV, StratifiedKFold
 import mlflow
 from huggingface_hub import login, HfApi
+from huggingface_hub.utils import RepositoryNotFoundError, HfHubHTTPError
 
 
 mlflow.set_tracking_uri("http://localhost:5000")

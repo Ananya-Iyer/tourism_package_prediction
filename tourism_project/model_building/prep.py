@@ -21,7 +21,7 @@ duplicates = df[df["CustomerID"].duplicated()]["CustomerID"].unique()
 print(duplicates)
 
 # Drop unique identifier column CustomerID as its not useful for modeling
-if not duplicates:
+if len(duplicates) == 0:
   df.drop(columns=['CustomerID'], inplace=True)
 
 # handle gender inputs having Fe Male as inputs and replace them with female

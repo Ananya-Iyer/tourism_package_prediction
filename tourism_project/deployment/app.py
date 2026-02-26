@@ -65,3 +65,4 @@ input_data = pd.DataFrame([{
 if st.button("Predict Purchase"):
     prediction = model.predict(input_data)[0]
     st.subheader("Prediction Result:")
+    st.success(f"Customer is likely to decide: **${prediction}**")

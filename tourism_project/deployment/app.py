@@ -16,7 +16,7 @@ This application predicts whether a customer will purchase the newly introduced 
 # User inputs
 
 # Categorical
-contact_source = st.selectbox("Contact Source", ["Self Enquiry", "Company Enquiry"])
+contact_source = st.selectbox("Contact Source", ["Self Enquiry", "Company Invited"])
 occupation = st.selectbox("Occupation", ["Salaried", "Free Lancer", "Small Business", "Large Business"])
 gender = st.selectbox("Gender", ["Male", "Female"])
 product_proposed = st.selectbox("Product Pitched", ["Basic", "Standard", "Deluxe", "Super Deluxe", "King"])

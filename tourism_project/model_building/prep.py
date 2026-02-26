@@ -18,7 +18,7 @@ df = pd.read_csv(DATASET_PATH)
 print("Dataset loaded from hugging face successfully.")
 
 duplicates = df[df["CustomerID"].duplicated()]["CustomerID"].unique()
-print(duplicates)
+print(f'{duplicates=}')
 
 # Drop unique identifier column CustomerID as its not useful for modeling
 if len(duplicates) == 0:

@@ -34,7 +34,7 @@ pitch_duration = st.number_input("Sales Pitch Duration", min_value=1, max_value=
 people_count = st.number_input("Visitors Count", min_value=1, max_value=50, value=2, step=1)
 follow_up_count = st.number_input("Follow up Count", min_value=1, max_value=20, value=2, step=1)
 number_of_trips = st.number_input("Number of Trips", min_value=1, max_value=100, value=1, step=1)
-number_of_childern = st.number_input("Number of Children Visiting", min_value=1, max_value=10, value=1, step=1)
+number_of_childern = st.number_input("Number of Children Visiting", min_value=0, max_value=10, value=1, step=1)
 monthly_income = st.number_input("Monthly Income", min_value=1000, max_value=1000000, value=5000)
 pitch_feedback = st.number_input("Pitch Satisfaction Score", min_value=1, max_value=10, value=1, step=1)
 
@@ -79,6 +79,6 @@ if st.button("Predict Purchase"):
     prediction = model.predict(input_data)[0]
     st.subheader("Prediction Result:")
     if prediction == 1:
-        st.success("Customer is likely to PURCHASE the package.")
+        st.success("Customer is likely to PURCHASE the package ✅.")
     else:
-        st.error("Customer is NOT likely to purchase.")
+        st.error("Customer is NOT likely to purchase ❌.")

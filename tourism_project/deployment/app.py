@@ -61,7 +61,7 @@ input_data = pd.DataFrame([{
     'MonthlyIncome': monthly_income
 }])
 
-# #------------------------For debugging----------------
+# ---------------------For debugging----------------
 
 # expected = list(model.feature_names_in_)
 # actual = list(input_data.columns)
@@ -71,7 +71,7 @@ input_data = pd.DataFrame([{
 
 # st.write("Missing columns:", set(expected) - set(actual))
 # st.write("Extra columns:", set(actual) - set(expected))
-# #--------------------------------------------------------
+# -------------------------------------------------------
 
 
 # Predict button
